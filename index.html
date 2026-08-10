@@ -3,156 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Резюме - Бухгалтер Оператор</title>
+  <title>Простой калькулятор</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      margin: 20px;
-      color: #212529;
+      max-width: 350px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f0f0f0;
     }
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
+    h1 {
+      text-align: center;
+      color: #333;
     }
-    .card {
-      background: #fff;
-      border: 1px solid #dee2e6;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .header h2 {
-      margin: 0;
-      font-weight: 700;
-    }
-    .salary {
-      font-weight: 600;
-      color: #222;
-      margin-bottom: 10px;
-    }
-    .details p {
-      margin: 6px 0;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-    .details strong {
-      font-weight: 600;
-    }
-    .edit-link {
-      font-size: 14px;
-      color: #0d6efd;
-      text-decoration: none;
-    }
-    .edit-link:hover {
-      text-decoration: underline;
-    }
-    .profile-pic {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1.5px solid #0d6efd;
-      cursor: pointer;
-    }
-    .section-title {
-      font-weight: 700;
+    input[type="number"] {
+      width: 100px;
+      padding: 8px;
       font-size: 16px;
-      margin-bottom: 8px;
+      margin-right: 10px;
+      margin-bottom: 20px;
     }
-    .contacts p {
-      margin: 5px 0;
-      font-size: 14px;
-      word-break: break-word;
-    }
-    .job-experience-item {
-      border-top: 1px solid #dee2e6;
-      padding: 12px 0 0 0;
-    }
-    .job-company {
-      font-weight: 700;
-      color: #6c757d;
-      font-size: 14px;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .job-title {
-      font-weight: 600;
-      font-size: 15px;
-      margin-bottom: 2px;
-    }
-    .job-dates {
-      font-size: 13px;
-      color: #495057;
-      margin-bottom: 6px;
-    }
-    .job-description {
-      font-size: 14px;
-      color: #212529;
-      white-space: pre-wrap;
-    }
-    .add-link {
-      font-size: 14px;
-      font-weight: 600;
-      color: #0d6efd;
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-right: 10px;
       cursor: pointer;
-      user-select: none;
+      border-radius: 5px;
+      border: 1px solid #007bff;
+      background-color: #007bff;
+      color: white;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+      min-height: 24px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <!-- Основной блок с описанием вакансии -->
-    <div class="card">
-      <div class="header">
-        <h2>Бухгалтер Оператор</h2>
-        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Фото профиля" class="profile-pic" />
-      </div>
-      <div class="salary">50 000 ₽ на руки</div>
-      <div class="details">
-        <p><strong>Тип занятости:</strong> Постоянная работа, Подработка</p>
-        <p><strong>Формат работы:</strong> Удалённо</p>
-        <p><strong>Желательное время в пути до работы:</strong> <b>Не имеет значения</b></p>
-        <p><strong>Командировки:</strong> <b>Не могу</b></p>
-      </div>
-      <a href="#" class="edit-link">✏ Редактировать</a>
-    </div>
+  <h1>Простой калькулятор</h1>
 
-    <!-- Контакты -->
-    <div class="card contacts">
-      <div class="section-title">Контакты</div>
-      <p><small>Мобильный телефон — предпочитаемый способ связи</small></p>
-      <p>+7 953 929-27-06</p>
-      <p><strong>Электронная почта</strong></p>
-      <p>nastya.logachova@bk.ru</p>
-      <a href="#" class="edit-link">✏ Редактировать</a>
-    </div>
+  <input type="number" id="num1" placeholder="Число 1" />
+  <input type="number" id="num2" placeholder="Число 2" />
+  <br/>
 
-    <!-- Опыт работы -->
-    <div class="card">
-      <div class="section-title">Опыт работы: 8 лет 7 месяцев <span class="add-link">+ Добавить</span></div>
+  <button onclick="calculate('+')">+</button>
+  <button onclick="calculate('-')">−</button>
+  <button onclick="calculate('*')">×</button>
+  <button onclick="calculate('/')">÷</button>
 
-      <div class="job-experience-item">
-        <div class="job-company">ecomerc <span style="font-size: 12px; color: #adb5bd;">7 месяцев</span></div>
-        <div class="job-title">оператор 1c WB</div>
-        <div class="job-dates">Январь 2026 — Июль 2026 (7 месяцев)</div>
-        <div class="job-description">
-          Введение отчетности, полный приход, расход, перемещение, таблицы google, маркировка.
-        </div>
-        <a href="#" class="edit-link" style="font-size:13px;">✏ Редактировать</a>
-      </div>
+  <div id="result"></div>
 
-    </div>
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
