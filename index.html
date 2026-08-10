@@ -1,55 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <title>Резюме Анастасии Логачовой</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 15px;
-            background: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
-        .section {
-            margin-bottom: 25px;
-        }
-        .label {
-            font-weight: bold;
-            color: #2980b9;
-            margin-right: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Резюме - Бухгалтер Оператор</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 20px;
+      color: #212529;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .header h2 {
+      margin: 0;
+      font-weight: 700;
+    }
+    .salary {
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 10px;
+    }
+    .details p {
+      margin: 6px 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .details strong {
+      font-weight: 600;
+    }
+    .edit-link {
+      font-size: 14px;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .edit-link:hover {
+      text-decoration: underline;
+    }
+    .profile-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid #0d6efd;
+      cursor: pointer;
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .contacts p {
+      margin: 5px 0;
+      font-size: 14px;
+      word-break: break-word;
+    }
+    .job-experience-item {
+      border-top: 1px solid #dee2e6;
+      padding: 12px 0 0 0;
+    }
+    .job-company {
+      font-weight: 700;
+      color: #6c757d;
+      font-size: 14px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .job-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+    .job-dates {
+      font-size: 13px;
+      color: #495057;
+      margin-bottom: 6px;
+    }
+    .job-description {
+      font-size: 14px;
+      color: #212529;
+      white-space: pre-wrap;
+    }
+    .add-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0d6efd;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>Резюме</h1>
-    <div class="section">
-        <p><span class="label">ФИО:</span>Анастасия Логачова</p>
-        <p><span class="label">Дата рождения:</span>01 июня 1996</p>
-        <p><span class="label">Прописка:</span>г. Томск, Россия</p>
-        <p><span class="label">Профессия:</span>Веб-разработчик</p>
+  <div class="container">
+
+    <!-- Основной блок с описанием вакансии -->
+    <div class="card">
+      <div class="header">
+        <h2>Бухгалтер Оператор</h2>
+        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Фото профиля" class="profile-pic" />
+      </div>
+      <div class="salary">50 000 ₽ на руки</div>
+      <div class="details">
+        <p><strong>Тип занятости:</strong> Постоянная работа, Подработка</p>
+        <p><strong>Формат работы:</strong> Удалённо</p>
+        <p><strong>Желательное время в пути до работы:</strong> <b>Не имеет значения</b></p>
+        <p><strong>Командировки:</strong> <b>Не могу</b></p>
+      </div>
+      <a href="#" class="edit-link">✏ Редактировать</a>
     </div>
-    <div class="section">
-        <h2>Опыт работы</h2>
-        <ul>
-            <li>2020–2026 — Веб-разработчик в компании XYZ</li>
-            <li>2018–2020 — Младший разработчик в компании ABC</li>
-        </ul>
+
+    <!-- Контакты -->
+    <div class="card contacts">
+      <div class="section-title">Контакты</div>
+      <p><small>Мобильный телефон — предпочитаемый способ связи</small></p>
+      <p>+7 953 929-27-06</p>
+      <p><strong>Электронная почта</strong></p>
+      <p>nastya.logachova@bk.ru</p>
+      <a href="#" class="edit-link">✏ Редактировать</a>
     </div>
-    <div class="section">
-        <h2>Навыки</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>React, Vue.js</li>
-            <li>Работа с Git и GitHub</li>
-        </ul>
+
+    <!-- Опыт работы -->
+    <div class="card">
+      <div class="section-title">Опыт работы: 8 лет 7 месяцев <span class="add-link">+ Добавить</span></div>
+
+      <div class="job-experience-item">
+        <div class="job-company">ecomerc <span style="font-size: 12px; color: #adb5bd;">7 месяцев</span></div>
+        <div class="job-title">оператор 1c WB</div>
+        <div class="job-dates">Январь 2026 — Июль 2026 (7 месяцев)</div>
+        <div class="job-description">
+          Введение отчетности, полный приход, расход, перемещение, таблицы google, маркировка.
+        </div>
+        <a href="#" class="edit-link" style="font-size:13px;">✏ Редактировать</a>
+      </div>
+
     </div>
+  </div>
 </body>
 </html>
